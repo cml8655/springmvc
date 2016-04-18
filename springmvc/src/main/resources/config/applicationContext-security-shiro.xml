@@ -88,12 +88,7 @@
              here if you like: -->
         <!-- <property name="filters">
             <util:map>
-                <entry key="aName" value-ref="someFilterPojo"/>
-            </util:map>
-        </property> -->
-        <property name="filterChainDefinitions">
-            <value>
-            	/css/**=anon
+            /css/**=anon
             	/font/**=anon
             	/img/**=anon
             	/js/**=anon
@@ -101,6 +96,12 @@
             	/ui/*=authc,roles["role1"]
             	/form/*=authc,roles["role1","role2"]
                 /** = authc
+                <entry key="aName" value-ref="someFilterPojo"/>
+            </util:map>
+        </property> -->
+        <property name="filterChainDefinitions">
+            <value>
+            	  /** = anon
             </value>
         </property>
     </bean>

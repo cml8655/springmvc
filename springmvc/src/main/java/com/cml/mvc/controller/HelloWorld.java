@@ -73,7 +73,7 @@ public class HelloWorld {
 	}
 
 	@ExceptionHandler
-	public @ResponseBody String handle(IllegalStateException e) {
+	public @ResponseBody String handle(Exception e) {
 		return "IllegalStateException handled!";
 	}
 
